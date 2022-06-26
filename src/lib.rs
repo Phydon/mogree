@@ -3,10 +3,6 @@ use colored::*;
 use rand::Rng;
 use std::io;
 
-pub fn colorit(word: &str) -> String {
-    word.blue().bold().to_string()
-}
-
 pub fn generate_symbol() {
     const NUM_SYM: usize = 14;
     let symbols: [char; NUM_SYM] = [
@@ -48,6 +44,8 @@ pub fn generate_symbol() {
 pub fn print_koala() {
     let koala = char::from_u32(128040).unwrap();
     println!("{koala}");
+    let mogree = "Mogree".to_string();
+    println!("Hi. Mein Name ist {}!", mogree.red().bold().italic());
 }
 
 pub fn clear_screen() {
