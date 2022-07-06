@@ -38,12 +38,12 @@ pub fn generate_symbol() {
 
     let r = rand::thread_rng().gen_range(1..NUM_SYM);
     let sym =  &symbols[r];
-    println!("{}\n", sym);
+    println!("          {}\n", sym);
 }
 
 pub fn print_koala() {
     let koala = char::from_u32(128040).unwrap();
-    println!("{koala}");
+    println!("          {koala}");
     let mogree = "Mogree".to_string();
     println!("Hi. Mein Name ist {}!", mogree.red().bold().italic());
 }
@@ -62,7 +62,10 @@ pub fn quit() -> bool {
         io::stdin().read_line(&mut input).expect("Failed to read input");
 
         match input.trim() {
-            "j" | "J" => return true,
+            "j" | "J" => {
+                println!("Auf Wiedersehen!");
+                return true;
+            }
             "n" | "N" => return false,
             _ => {
                 println!("Keine gültige Eingabe");

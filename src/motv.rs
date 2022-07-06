@@ -1,5 +1,5 @@
 use rand::Rng;
-use std::io;
+use std::{io, process};
 
 pub fn mood_today() -> String {
     loop {
@@ -7,12 +7,17 @@ pub fn mood_today() -> String {
         println!("\nBitte die entsprechende Zahl eingeben");
         println!("[1]   => Motivation");
         println!("[2]   => Lustig");
+        println!("[Q]   => Beenden");
 
         let mut input = String::new();
         io::stdin().read_line(&mut input).expect("Failed to read input");
 
         match input.trim() {
             "1" | "2" => return input.trim().to_string(),
+            "q" | "Q" => {
+                println!("Auf Wiedersehen!");
+                process::exit(1);
+            }
             _ => {
                 println!("Keine gültige Eingabe");
                 println!("Versuch es nochmal");
@@ -23,7 +28,11 @@ pub fn mood_today() -> String {
 
 pub fn have_motivation() {
     let motivations: Vec<_> = vec![
-        ""
+        "Um an die Quelle zu kommen, muss man gegen den Strom schwimmen. (Konfuzius)",
+        "Glück lässt sich nicht erzwingen. Aber es mag hartnäckige Menschen.",
+        "Alles, was du brauchst, um erfolgreich zu sein, hast du bereits in dir.",
+        "Ohne Regen keinen Regenbogen -so einfach.",
+        "Jetzt oder nie!"
     ];
 
     let len = motivations.len();
