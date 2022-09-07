@@ -47,7 +47,7 @@ pub fn have_fun() {
         "Ich lasse mich zum Pandabären umschulen. Wenn ich faul rumliege und immer dicker werde, finden mich trotzdem alle niedlich.",
         "Gestern stand ich noch am Rande des Abgrunds, heute bin ich schon einen Schritt weiter!",
         "Ich mag Nashörner! Die sind wie Einhörner, nur dicker!",
-        "/“Sie hören von meinem Anwalt!/” ist die Erwachsenen-Version von /“Das sag ich meiner Mama!/”",
+        "'Sie hören von meinem Anwalt!' ist die Erwachsenen-Version von 'Das sag ich meiner Mama!'",
         "Tut mir leid, ich habe weder die Geduld noch die Buntstifte es dir zu erklären."
     ];
 
